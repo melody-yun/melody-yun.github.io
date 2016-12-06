@@ -62,12 +62,9 @@
     			
             
     			
-    			<a data-idx="1" q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-    			
             
     			
-    			<a data-idx="2" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a data-idx="1" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
     			
             
@@ -75,7 +72,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/melody-yun" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
@@ -121,7 +118,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/melody-yun" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
@@ -168,8 +165,9 @@
 <p>思考：也可以用<code>box-shadow</code>来实现，优点是可以圆角贴合。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">        border-radius: 4px;</div><div class="line">        background-color: white;</div><div class="line">        box-shadow: 0 0 0 10px hsla(0, 70%, 10%, 0.5);</div><div class="line">                  </div><div class="line">        max-width: 20rem;</div><div class="line">        padding: 2rem;</div><div class="line">        margin: 2rem auto;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 <p>#多重边框</p>
 <blockquote>
-<p><code>box-shadow</code>可层层叠加，达到多层边框的效果。但它不会影响布局，不会受到<code>box-sizing</code>属性的影响，也不会响应鼠标事件，比如悬停或点击。上述问题可通过增加内外边距和inset来解决。<br> <code>outline</code>只适用于双层“边框”的场景，且边框不一定会贴合border-radius属性产生的圆角。其优点在于样式灵活(<code>dashed</code>等)，间距可控(<code>outline-offset</code>)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">        width: 100px;</div><div class="line">        height: 60px;</div><div class="line">        margin: 25px;</div><div class="line">        background: #9ACD32;</div><div class="line"></div><div class="line">        box-shadow: 0 0 0 10px #655,</div><div class="line">                    0 0 0 15px #FF1493,</div><div class="line">                    0 2px 5px 15px rgba(0, 0, 0, .7);</div><div class="line"></div><div class="line">        outline: white dashed 1px;</div><div class="line">        outline-offset: -10px;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p><code>box-shadow</code>可层层叠加，达到多层边框的效果。但它不会影响布局，不会受到<code>box-sizing</code>属性的影响，也不会响应鼠标事件，比如悬停或点击。上述问题可通过增加内外边距和inset来解决。<br> <code>outline</code>只适用于双层“边框”的场景，且边框不一定会贴合border-radius属性产生的圆角。其优点在于样式灵活(<code>dashed</code>等)，间距可控(<code>outline-offset</code>)。</p>
 </blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">        width: 100px;</div><div class="line">        height: 60px;</div><div class="line">        margin: 25px;</div><div class="line">        background: #9ACD32;</div><div class="line"></div><div class="line">        box-shadow: 0 0 0 10px #655,</div><div class="line">                    0 0 0 15px #FF1493,</div><div class="line">                    0 2px 5px 15px rgba(0, 0, 0, .7);</div><div class="line"></div><div class="line">        outline: white dashed 1px;</div><div class="line">        outline-offset: -10px;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <h1 id="灵活的背景位置"><a href="#灵活的背景位置" class="headerlink" title="灵活的背景位置"></a>灵活的背景位置</h1><blockquote>
 <p><code>background-position</code>默认是padding box。<br>如果想要让它自动地跟着我们设定的内边距走，可以用<code>background-origin: content-box;</code>来解决。<br>图片位置也可以使用<code>calc()</code>来定位。在<code>calc()</code>函数内部的-和+运算符的两侧需各加一个空白符。</p>
 </blockquote>
@@ -317,43 +315,11 @@
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">hello</div>
   	  	
     	</section>
     
