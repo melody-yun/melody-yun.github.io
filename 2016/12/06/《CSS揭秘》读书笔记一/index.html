@@ -9,27 +9,18 @@
   <title>《CSS揭秘》读书笔记一 | melody的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="半透明背景
-关键在于通过background-clip属性来调整背景的默认行为
-
-more
-12345678910div &amp;#123;        border: 10px solid hsla(0, 70%, 10%, 0.5);        border-radius: 4px;        background-color: white;        background-clip:">
+关键在于通过background-clip属性来调整背景的默认行为">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《CSS揭秘》读书笔记一">
 <meta property="og:url" content="http://melody-yun.github.io/2016/12/06/《CSS揭秘》读书笔记一/index.html">
 <meta property="og:site_name" content="melody的博客">
 <meta property="og:description" content="半透明背景
-关键在于通过background-clip属性来调整背景的默认行为
-
-more
-12345678910div &amp;#123;        border: 10px solid hsla(0, 70%, 10%, 0.5);        border-radius: 4px;        background-color: white;        background-clip:">
-<meta property="og:updated_time" content="2016-12-06T13:47:28.188Z">
+关键在于通过background-clip属性来调整背景的默认行为">
+<meta property="og:updated_time" content="2016-12-06T14:07:17.534Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《CSS揭秘》读书笔记一">
 <meta name="twitter:description" content="半透明背景
-关键在于通过background-clip属性来调整背景的默认行为
-
-more
-12345678910div &amp;#123;        border: 10px solid hsla(0, 70%, 10%, 0.5);        border-radius: 4px;        background-color: white;        background-clip:">
+关键在于通过background-clip属性来调整背景的默认行为">
   
     <link rel="alternative" href="/atom.xml" title="melody的博客" type="application/atom+xml">
   
@@ -175,7 +166,7 @@ more
         <h1 id="半透明背景"><a href="#半透明背景" class="headerlink" title="半透明背景"></a>半透明背景</h1><blockquote>
 <p>关键在于通过<code>background-clip</code>属性来调整背景的默认行为</p>
 </blockquote>
-<p>more</p>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">        border: 10px solid hsla(0, 70%, 10%, 0.5);</div><div class="line">        border-radius: 4px;</div><div class="line">        background-color: white;</div><div class="line">        background-clip: padding-box;</div><div class="line"></div><div class="line">        max-width: 20rem;</div><div class="line">        padding: 2rem;</div><div class="line">        margin: 2rem auto;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>思考：也可以用<code>box-shadow</code>来实现，优点是可以圆角贴合。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">        border-radius: 4px;</div><div class="line">        background-color: white;</div><div class="line">        box-shadow: 0 0 0 10px hsla(0, 70%, 10%, 0.5);</div><div class="line">                  </div><div class="line">        max-width: 20rem;</div><div class="line">        padding: 2rem;</div><div class="line">        margin: 2rem auto;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 <h1 id="多重边框"><a href="#多重边框" class="headerlink" title="多重边框"></a>多重边框</h1><blockquote>
