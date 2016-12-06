@@ -162,7 +162,8 @@
 <p>关键在于通过<code>background-clip</code>属性来调整背景的默认行为</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">        border: 10px solid hsla(0, 70%, 10%, 0.5);</div><div class="line">        border-radius: 4px;</div><div class="line">        background-color: white;</div><div class="line">        background-clip: padding-box;</div><div class="line"></div><div class="line">        max-width: 20rem;</div><div class="line">        padding: 2rem;</div><div class="line">        margin: 2rem auto;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>思考：也可以用<code>box-shadow</code>来实现，优点是可以圆角贴合。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">        border-radius: 4px;</div><div class="line">        background-color: white;</div><div class="line">        box-shadow: 0 0 0 10px hsla(0, 70%, 10%, 0.5);</div><div class="line">                  </div><div class="line">        max-width: 20rem;</div><div class="line">        padding: 2rem;</div><div class="line">        margin: 2rem auto;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>思考：也可以用<code>box-shadow</code>来实现，优点是可以圆角贴合。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">        border-radius: 4px;</div><div class="line">        background-color: white;</div><div class="line">        box-shadow: 0 0 0 10px hsla(0, 70%, 10%, 0.5);</div><div class="line">                  </div><div class="line">        max-width: 20rem;</div><div class="line">        padding: 2rem;</div><div class="line">        margin: 2rem auto;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>#多重边框</p>
 <blockquote>
 <p><code>box-shadow</code>可层层叠加，达到多层边框的效果。但它不会影响布局，不会受到<code>box-sizing</code>属性的影响，也不会响应鼠标事件，比如悬停或点击。上述问题可通过增加内外边距和inset来解决。<br> <code>outline</code>只适用于双层“边框”的场景，且边框不一定会贴合border-radius属性产生的圆角。其优点在于样式灵活(<code>dashed</code>等)，间距可控(<code>outline-offset</code>)。</p>
@@ -181,7 +182,7 @@
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS-读书笔记/">CSS 读书笔记</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
 	</div>
 
       
