@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://melody-yun.github.io/.../.../.../img/boxModel.png">
 <meta property="og:image" content="http://melody-yun.github.io/img/boxModel.png">
 <meta property="og:image" content="http://melody-yun.github.io/img/boxModel.png">
-<meta property="og:updated_time" content="2016-12-07T08:57:14.859Z">
+<meta property="og:updated_time" content="2016-12-07T09:26:39.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《CSS揭秘》读书笔记一">
 <meta name="twitter:description" content="半透明背景
@@ -191,7 +191,7 @@
 <p><a href="http://dabblet.com/gist/b5fcb42d055427ab6c1a" target="_blank" rel="external">尝试一下</a></p>
 <p>区分：<code>background-origin</code>规定背景位置（<code>background-position</code>）的起始点，默认值为<code>padding-box</code>；而<code>background-clip</code>规定背景（图片和背景色）的绘制区域，即裁剪掉区域外的内容，默认值为<code>border-box</code>。可选值图示：<img src="/img/boxModel.png"><br><img src=".../.../.../img/boxModel.png" alt="盒模型"><br><img src="img/boxModel.png" alt="盒模型"></p>
 <h1 id="边框内圆角"><a href="#边框内圆角" class="headerlink" title="边框内圆角"></a>边框内圆角</h1><blockquote>
-<p>方法一：用两个div；<br>方法二：用<code>box-shadow</code>填补border和outline之间的空缺，其值需小于描边宽度（等于时会渲染异常），大于$$\sqrt{2}*r-r$$。</p>
+<p>方法一：用两个div；<br>方法二：用<code>box-shadow</code>填补border和outline之间的空缺，其值需小于描边宽度（等于时会渲染异常），大于\(\sqrt{2}*r-r\)。</p>
 </blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">outline</span>: .<span class="number">6em</span> solid <span class="number">#655</span>;</div><div class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> .<span class="number">4em</span> <span class="number">#655</span>; <span class="comment">/* 阴影尺寸可选圆角值的一半 */</span></div><div class="line">    </div><div class="line">    <span class="attribute">max-width</span>: <span class="number">10em</span>;</div><div class="line">    <span class="attribute">border-radius</span>: .<span class="number">8em</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">1em</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">1em</span>;</div><div class="line">    <span class="attribute">background</span>: tan;</div><div class="line">    <span class="attribute">font</span>: <span class="number">100%</span>/<span class="number">1.5</span> sans-serif;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>计算图示：<img src="img/boxModel.png" alt="阴影尺寸"><br><a href="http://dabblet.com/gist/170fe436f290083cc24c" target="_blank" rel="external">尝试一下</a></p>
@@ -486,23 +486,6 @@
     </div>
 
 </div>
-  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
